@@ -11,7 +11,7 @@ void priceGeneratorSample(double initEquityPrice, unsigned numTimeStamps, double
 	// Define price generator object
 	PriceGenerator pg(initEquityPrice, numTimeStamps, timeToExpiry, drift, volatility);
 
-	vector<double> resultPrices = pg(seed); // call function and store in vector
+	vector<double> resultPrices = pg(seed); // call function and store result in vector
 
 	// Output result
 	for_each(resultPrices.begin(), resultPrices.end(), printDouble);

@@ -7,10 +7,7 @@
 using std::vector;
 using std::mt19937_64;
 using std::normal_distribution;
-
 using std::exp;
-
-using std::vector;
 
 PriceGenerator::PriceGenerator(double initEquityPrice, unsigned numTimeStamps, double timeToExpiry, double drift, double volatility) :
 	// Initialize private members
