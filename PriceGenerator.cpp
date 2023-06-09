@@ -34,15 +34,16 @@ vector<double> PriceGenerator::operator()(int seed) const { // Overloads () oper
 
 		double price = 0.0;
 
+		// split up exponent of e to two parts
 		double exp1 = ((drift_ - (volatility_ * volatility_) / 2) * dt_);
 		double exp2 = volatility_ * norm * sqrt(dt_);
 
-		price = prevPrice * exp(exp1 + exp2);
+		price = prevPrice * exp(exp1 + exp2); // apply formula to generate option price
 
 		return price;
 	};
 
-	v.push_back(initEquityPrice_); // add first stock price
+	v.push_back(initEquityPrice_); // add first stock price to vector
 	double equityPrice = initEquityPrice_; // variable to store previous price
 
 	for (int i = 1; i <= numTimeSteps_; ++i) {
