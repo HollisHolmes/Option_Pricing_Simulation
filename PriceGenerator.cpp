@@ -18,7 +18,7 @@ PriceGenerator::PriceGenerator(double initEquityPrice, unsigned numTimeStamps, d
 	numTimeSteps_(numTimeStamps),
 	drift_(drift),
 	volatility_(volatility),
-	dt_(timeToExpiry / numTimeSteps) {}
+	dt_(timeToExpiry / numTimeStamps) {}
 
 vector<double> PriceGenerator::operator()(int seed) const { // Overloads () operator
 	vector<double> v;

@@ -1,12 +1,12 @@
-#ifndef EQUITY_PRICE_GENERATOR_H
-#define EQUITY_PRICE_GENERATOR_H
+#ifndef PRICE_GENERATOR_H
+#define PRICE_GENERATOR_H
 
 #include<vector>
 
 class PriceGenerator {
 public:
 	PriceGenerator(double initEquityPrice, unsigned numTimeStamps, double timeToExpiry, double drift, double volatility);
-	std::vector<double> operator()(int seed) const
+	std::vector<double> operator()(int seed) const;
 
 private:
 	double dt_; 
