@@ -3,9 +3,7 @@
 
 #include<vector>
 
-class PriceGenerator
-{
-
+class PriceGenerator {
 public:
 	PriceGenerator(double initEquityPrice, unsigned numTimeStamps, double timeToExpiry, double drift, double volatility);
 	std::vector<double> operator()(int seed) const
